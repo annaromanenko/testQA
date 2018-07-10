@@ -13,7 +13,7 @@ public class WikipediaPage {
 
     private By castActor = By.xpath("//*[@id='mw-content-text']/div/ul[1]/li/a");
     private By actorNameHead = By.id("firstHeading");
-    private By dragonFilm = By.xpath("//*[@class='mw-headline' and (contains(., 'filmography') or contains(., " +
+    private By dragonMovie = By.xpath("//*[@class='mw-headline' and (contains(., 'filmography') or contains(., " +
             "'Filmography'))]/following::a[contains(., 'To Kill a Dragon')]");
 
     public int actorQuantity() {
@@ -34,8 +34,8 @@ public class WikipediaPage {
         return driver.findElement(actorNameHead).getText();
     }
 
-    public boolean isDragonFilmPresentInFilmography() {
-        return driver.findElement(dragonFilm).isDisplayed();
+    public boolean isDragonMoviePresentInFilmography() {
+        return driver.findElement(dragonMovie).isDisplayed();
     }
 }
 

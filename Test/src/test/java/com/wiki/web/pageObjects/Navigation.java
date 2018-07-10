@@ -7,7 +7,7 @@ public class Navigation {
 
     private WebDriver driver;
 
-    public WikipediaPage navigateToWikipediaFilmPage(WebDriver driver) {
+    public WikipediaPage navigateToWikipediaMoviePage(WebDriver driver) {
         driver.get("https://en.wikipedia.org/wiki/To_Kill_a_Dragon");
         System.out.print("Opening wikipedia page");
         WikipediaPage wikipediaPage = PageFactory.initElements(this.driver, WikipediaPage.class);
